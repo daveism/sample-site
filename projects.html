@@ -7,7 +7,7 @@ subtitle: My collection of work
 <div class="posts-list">
   {% for project in site.projects %}
   <article class="post-preview">
-    <a href="{{ project.url }}">
+    <a href="{{ project.url | prepend: site.baseurl }}">
 	  <h2 class="post-title">{{ project.title }}</h2>
 
 	  {% if project.subtitle %}
@@ -22,8 +22,8 @@ subtitle: My collection of work
     <div class="post-entry-container">
       {% if project.bigimg %}
       <div class="col-sm-3">
-      <a href="{{ project.url  }}">
-          <img class="thumbnail img-responsive" src="{{project.bigimg}}" alt="{{ project.title }}">
+      <a href="{{ project.url  | prepend: site.baseurl }}">
+          <img class="thumbnail img-responsive" src="{{project.bigimg | prepend: site.baseurl }}" alt="{{ project.title }}">
       </a>
     </div>
       <!-- <div class="post-image">
@@ -34,8 +34,8 @@ subtitle: My collection of work
       {% endif %}
       {% if project.image %}
       <div class="col-sm-3">
-      <a href="{{ project.url  }}">
-          <img class="thumbnail img-responsive" src="{{project.image}}" alt="{{ project.title }}">
+      <a href="{{ project.url | prepend: site.baseurl  }}">
+          <img class="thumbnail img-responsive" src="{{project.image | prepend: site.baseurl }}" alt="{{ project.title }}">
       </a>
     </div>
       <!-- <div class="post-image">
@@ -48,7 +48,7 @@ subtitle: My collection of work
         {{ project.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
         {% assign excerpt_word_count = project.excerpt | number_of_words %}
         {% if project.content != project.excerpt or excerpt_word_count > site.excerpt_length %}
-          <a href="{{ project.url }}" class="post-read-more">[Read&nbsp;More]</a>
+          <a href="{{ project.url | prepend: site.baseurl }}" class="post-read-more">[Read&nbsp;More]</a>
         {% endif %}
       </div>
     </div>
@@ -58,7 +58,7 @@ subtitle: My collection of work
       Tags:
       {% if site.link-tags %}
       {% for tag in project.tags %}
-      <a href="{{ site.baseurl }}/tag/{{ tag }}">{{ tag }}</a>
+      <a href="{{ site.baseurl | prepend: site.baseurl  }}/tag/{{ tag }}">{{ tag }}</a>
       {% endfor %}
       {% else %}
         {{ project.tags | join: ", " }}
