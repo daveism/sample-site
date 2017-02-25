@@ -1,0 +1,102 @@
+---
+layout: page
+title: projects
+subtitle: My collection of work
+---
+
+<div class="posts-list">
+  {% for project in site.projects %}
+  <article class="post-preview">
+    <a href="{{ project.url }}">
+	  <h2 class="post-title">{{ project.title }}</h2>
+
+	  {% if project.subtitle %}
+    <p class="post-meta">
+      {{ project.subtitle }}
+    </p>
+	  {% endif %}
+    </a>
+
+
+
+    <div class="post-entry-container">
+      {% if project.bigimg %}
+      <div class="col-sm-3">
+      <a href="{{ project.url  }}">
+          <img class="thumbnail img-responsive" src="{{project.bigimg}}" alt="{{ project.title }}">
+      </a>
+    </div>
+      <!-- <div class="post-image">
+        <a href="{{ project.url  }}">
+          <img src="{{ project.image }}">
+        </a>
+      </div> -->
+      {% endif %}
+      {% if project.image %}
+      <div class="col-sm-3">
+      <a href="{{ project.url  }}">
+          <img class="thumbnail img-responsive" src="{{project.image}}" alt="{{ project.title }}">
+      </a>
+    </div>
+      <!-- <div class="post-image">
+        <a href="{{ project.url  }}">
+          <img src="{{ project.image }}">
+        </a>
+      </div> -->
+      {% endif %}
+      <div class="post-entry">
+        {{ project.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
+        {% assign excerpt_word_count = project.excerpt | number_of_words %}
+        {% if project.content != project.excerpt or excerpt_word_count > site.excerpt_length %}
+          <a href="{{ project.url }}" class="post-read-more">[Read&nbsp;More]</a>
+        {% endif %}
+      </div>
+    </div>
+
+    {% if project.tags.size > 0 %}
+    <div class="blog-tags">
+      Tags:
+      {% if site.link-tags %}
+      {% for tag in project.tags %}
+      <a href="{{ site.baseurl }}/tag/{{ tag }}">{{ tag }}</a>
+      {% endfor %}
+      {% else %}
+        {{ project.tags | join: ", " }}
+      {% endif %}
+    </div>
+    {% endif %}
+
+   </article>
+  {% endfor %}
+</div>
+      <!-- Projects Row -->
+      <!-- <div class="row">
+          <div class="col-md-4 portfolio-item">
+              <a href="#">
+                  <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+              </a>
+              <h3>
+                  <a href="#">Project Name</a>
+              </h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+          </div>
+          <div class="col-md-4 portfolio-item">
+              <a href="#">
+                  <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+              </a>
+              <h3>
+                  <a href="#">Project Name</a>
+              </h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+          </div>
+          <div class="col-md-4 portfolio-item">
+              <a href="#">
+                  <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+              </a>
+              <h3>
+                  <a href="#">Project Name</a>
+              </h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+          </div>
+      </div> -->
+      <!-- /.row -->
