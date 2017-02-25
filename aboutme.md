@@ -4,7 +4,7 @@ title: About me
 subtitle: Why you'd want to hire me to figure it all out
 ---
 
-My name is Dave Michelson. I go by Daveism online.  
+My name is Dave Michelson. I go by Daveism online! 
 
 I believe the following:
 
