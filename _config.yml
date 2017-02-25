@@ -146,6 +146,9 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+  drafts:
+    output: true
+    permalink: /drafts/:path/
 
 # Exclude these files from production site
 exclude:
@@ -247,7 +250,7 @@ prose:
 gems:
   - jekyll-paginate
 
-show_drafts: false
+# show_drafts: false
 
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
