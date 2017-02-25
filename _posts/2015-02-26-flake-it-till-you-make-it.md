@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Something Interesting
-subtitle: Excerpt from Soulshaping by Jeff Brown
+subtitle: Just an idea
 bigimg: /img/path.jpg
 published: true
 date: '2017-02-15'
