@@ -42,14 +42,14 @@ prose:
           help: "Enter date of post."
           placeholder: "yyyy-mm-dd"
           alterable: true
-      - name: "Small image"
+      - name: "image"
         field:
           element: "text"
           label: "Avatar Image"
           help: "Add a thumbnail image to your post. This will be used in avatar"
           placeholder: "Thumbnail"
           alterable: true
-      - name: "Header Image"
+      - name: "bigimg"
         field:
           element: "text"
           label: "Header Image"
@@ -89,14 +89,14 @@ prose:
           help: "Enter date of project."
           placeholder: "yyyy-mm-dd"
           alterable: true
-      - name: "Small image"
+      - name: "image"
         field:
           element: "text"
           label: "Avatar Image"
           help: "Add a thumbnail image to your post. This will be used in avatar"
           placeholder: "Thumbnail"
           alterable: true
-      - name: "Header Image"
+      - name: "bigimg"
         field:
           element: "text"
           label: "Header Image"
