@@ -13,8 +13,7 @@ prose:
     - /img
     - /js
   metadata:
-    _posts:
-      blog:
+    _posts/blog:
         - name: "layout"
           field:
             element: "hidden"
@@ -50,7 +49,7 @@ prose:
             element: "checkbox"
             label: "Publish"
             help: "Check to publish post, uncheck to hide."
-      projects:
+    _posts/projects:
         - name: "layout"
           field:
             element: "hidden"
