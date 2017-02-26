@@ -2,7 +2,7 @@
 layout: post
 category: projects
 published: false
-title: Project Example 1
+title: Untitled
 ---
 ## A New project example 1
 
