@@ -45,14 +45,14 @@ prose:
       - name: "Small image"
         field:
           element: "text"
-          label: "Image"
+          label: "Avatar Image"
           help: "Add a thumbnail image to your post. This will be used in avatar"
           placeholder: "Thumbnail"
           alterable: true
       - name: "Header Image"
         field:
           element: "text"
-          label: "Image"
+          label: "Header Image"
           help: "Add a header image to your post."
           placeholder: "Thumbnail"
           alterable: true
@@ -92,14 +92,14 @@ prose:
       - name: "Small image"
         field:
           element: "text"
-          label: "Image"
+          label: "Avatar Image"
           help: "Add a thumbnail image to your post. This will be used in avatar"
           placeholder: "Thumbnail"
           alterable: true
       - name: "Header Image"
         field:
           element: "text"
-          label: "Image"
+          label: "Header Image"
           help: "Add a header image to your post."
           placeholder: "Thumbnail"
           alterable: true
