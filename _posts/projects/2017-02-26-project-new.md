@@ -1,7 +1,7 @@
 ---
 layout: post
 category: projects
-published: false
+published: true
 title: Untitled
 ---
 ## A New project
