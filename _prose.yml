@@ -1,7 +1,8 @@
 # prose.io config
 prose:
   rooturl: '_posts'
-  media: 'img'
+  siteurl: 'http://daveism.github.io/sample-site/'
+  media: 'media'
   ignore:
     - 404.html
     - LICENSE
