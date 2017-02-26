@@ -5,7 +5,7 @@ subtitle: My collection of work
 ---
 
 <div class="posts-list">
-  {% for project in site.categories.projects %}
+  {% for project in site.projects %}
   <article class="post-preview">
     <a href="{{ project.url | prepend: site.baseurl }}">
 	  <h2 class="post-title">{{ project.title }}</h2>
@@ -84,7 +84,6 @@ subtitle: My collection of work
   </ul>
   {% endif %}
 
-  
 </div>
       <!-- Projects Row -->
       <!-- <div class="row">
