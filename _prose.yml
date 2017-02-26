@@ -19,6 +19,10 @@ prose:
           element: "hidden"
           value: "articles"
     _posts/blog:
+      - name: "category"
+        field:
+          element: "select"
+          value: 'blog-projects'
       - name: "layout"
         field:
           element: "hidden"
@@ -64,8 +68,8 @@ prose:
     _posts/projects:
       - name: "category"
         field:
-          element: "hidden"
-          value: "projects"
+          element: "select"
+          value: 'blog-projects'
       - name: "layout"
         field:
           element: "hidden"
