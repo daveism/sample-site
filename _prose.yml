@@ -1,7 +1,6 @@
 # prose.io config
 prose:
   rooturl: '_posts'
-  siteurl: 'http://daveism.github.io/sample-site/'
   media: 'media'
   ignore:
     - 404.html
