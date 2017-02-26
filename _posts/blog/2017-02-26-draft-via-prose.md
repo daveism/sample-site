@@ -2,6 +2,7 @@
 layout: post
 published: true
 title: draft via prose
+category: blog
 ---
 ## A New Post
 

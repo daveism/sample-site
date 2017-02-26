@@ -161,6 +161,7 @@ exclude:
 
 gems:
   - jekyll-paginate
+  - jekyll-paginate-category
 
 # show_drafts: false
 
