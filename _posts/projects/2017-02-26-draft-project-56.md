@@ -1,7 +1,7 @@
 ---
 layout: post
 category: projects
-published: false
+published: true
 title: draft project 56
 subtitle: why is not converting
 ---
