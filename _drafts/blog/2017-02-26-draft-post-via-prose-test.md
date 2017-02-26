@@ -1,7 +1,7 @@
 ---
 layout: post
-published: false
-title: draft post via prose test
+published: true
+title: draft post via prose test post
 ---
 ## A New Post
 
