@@ -7,4 +7,4 @@ title: draft via prose
 
 Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
 
-Another edit 15 11:50
+Another edit at 11:50
