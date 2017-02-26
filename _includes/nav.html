@@ -9,7 +9,7 @@
       </button>
       {% if site.title-img %}
         <a class="navbar-brand navbar-brand-logo" href="{{ site.url }}{{site.baseurl}}/"><img src="{{ site.title-img | prepend: site.baseurl }}"/></a>
-        <a class="navbar-brand" href="{{ site.url }}{{site.baseurl}}/">{{ site.title}}</a>
+        <a class="navbar-brand" href="{{ site.url }}{{site.baseurl}}/">{{ site.title }}{{site.url}}</a>
       {% else %}
         <a class="navbar-brand" href="{{ site.url }}{{site.baseurl}}/">{{ site.title }}</a>
       {% endif %}
