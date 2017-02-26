@@ -117,11 +117,8 @@ timezone: "America/New_York"
 markdown: kramdown
 highlighter: rouge
 permalink: /:categories/:year/:month/:day/:title.html
-paginate: 5
-paginate_path: "page:num"
 
-category_dir: "posts"
-category_layout: "index.html"
+paginate: 5
 
 kramdown:
   input: GFM
@@ -165,7 +162,6 @@ exclude:
 
 gems:
   - jekyll-paginate
-  - jekyll-paginate-category
 
 # show_drafts: false
 
