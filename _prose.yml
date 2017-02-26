@@ -14,7 +14,7 @@ prose:
     - /js
   metadata:
     _posts:
-      - blog:
+      blog:
         - name: "layout"
           field:
             element: "hidden"
@@ -50,7 +50,7 @@ prose:
             element: "checkbox"
             label: "Publish"
             help: "Check to publish post, uncheck to hide."
-      - projets:
+      projets:
         - name: "layout"
           field:
             element: "hidden"
