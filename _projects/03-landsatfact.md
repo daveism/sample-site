@@ -1,8 +1,7 @@
 ---
 layout: project_pages
-title: landsat fact
+title: Landsat FACT
 subtitle: Forest Change
-image: /img/404-southpark.jpg
 ---
 
 

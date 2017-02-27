@@ -24,7 +24,7 @@ description: A collection of my work!
 # List of links in the navigation bar
 navbar-links:
   About Me: "aboutme"
-  Projects: "projects"
+  Projects: "projects_pages.html"
   # Resources:
   #    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
   #   - Learn markdown: "http://www.markdowntutorial.com/"
@@ -116,7 +116,7 @@ title-separator: "-"
 timezone: "America/New_York"
 markdown: kramdown
 highlighter: rouge
-permalink: /:categories/:year/:month/:day/:title/
+permalink: /:categories/:year/:month/:day/:title.html
 
 paginate: 5
 
