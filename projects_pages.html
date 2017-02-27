@@ -2,117 +2,52 @@
 layout: page
 title: Projects
 subtitle: My collection of work
+grid: 3
 ---
 
 <div class="posts-list">
+  {% assign counter = 0 %}
   {% for project in site.projects %}
-  <article class="post-preview">
-    <a href="{{ project.url | prepend: site.baseurl }}">
-	  <h2 class="post-title">{{ project.title }}</h2>
+  {% assign mod = forloop.index0 | plus:1 | modulo:page.grid %}
+  {% assign counter = counter | plus:1 %}
 
-	  {% if project.subtitle %}
-    <p class="post-meta">
-      {{ project.subtitle }}
-    </p>
-	  {% endif %}
-    </a>
-
-
-
-    <div class="post-entry-container">
-      {% if project.bigimg %}
-      <div class="col-sm-3">
-      <a href="{{ project.url  | prepend: site.baseurl }}">
-          <img class="thumbnail img-responsive" src="{{project.bigimg | prepend: site.baseurl }}" alt="{{ project.title }}">
-      </a>
-    </div>
-      <!-- <div class="post-image">
-        <a href="{{ project.url  }}">
-          <img src="{{ project.image }}">
-        </a>
-      </div> -->
-      {% endif %}
-      {% if project.image %}
-      <div class="col-sm-3">
-      <a href="{{ project.url | prepend: site.baseurl  }}">
-          <img class="thumbnail img-responsive" src="{{project.image | prepend: site.baseurl }}" alt="{{ project.title }}">
-      </a>
-    </div>
-      <!-- <div class="post-image">
-        <a href="{{ project.url  }}">
-          <img src="{{ project.image }}">
-        </a>
-      </div> -->
-      {% endif %}
-      <div class="post-entry">
-        {{ project.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
-        {% assign excerpt_word_count = project.excerpt | number_of_words %}
-        {% if project.content != project.excerpt or excerpt_word_count > site.excerpt_length %}
-          <a href="{{ project.url | prepend: site.baseurl }}" class="post-read-more">[Read&nbsp;More]</a>
-        {% endif %}
-      </div>
-    </div>
-
-    {% if project.tags.size > 0 %}
-    <div class="blog-tags">
-      Tags:
-      {% if site.link-tags %}
-      {% for tag in project.tags %}
-      <a href="{{ site.baseurl | prepend: site.baseurl  }}/tag/{{ tag }}">{{ tag }}</a>
-      {% endfor %}
-      {% else %}
-        {{ project.tags | join: ", " }}
-      {% endif %}
-    </div>
-    {% endif %}
-
-   </article>
-  {% endfor %}
-
-  {% if paginator.total_pages > 1 %}
-  <ul class="pager main-pager">
-    {% if paginator.previous_page %}
-    <li class="previous">
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Projects</a>
-    </li>
-    {% endif %}
-    {% if paginator.next_page %}
-    <li class="next">
-      <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Projects &rarr;</a>
-    </li>
-    {% endif %}
-  </ul>
+  {% if counter == 1 %}
+  <div class="row">
   {% endif %}
 
+  <div class="posts-list">
+    <div class="col-md-4 portfolio-item">
+      <article class="post-preview">
+
+        <a href="{{ project.url | prepend: site.baseurl }}">
+          {% if project.bigimg %}
+            <img class="thumbnail img-responsive" src="{{project.bigimg | prepend: site.baseurl }}" alt="{{ project.title }}">
+            {% else %}
+            <img class="thumbnail img-responsive" src="http://placehold.it/700x400" alt="fake image as a place holder">
+            {% endif %}
+
+        </a>
+        <h3>
+            <a href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a>
+        </h3>
+
+        <div class="post-entry">
+          {{ project.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
+          {% assign excerpt_word_count = project.excerpt | number_of_words %}
+          {% if project.content != project.excerpt or excerpt_word_count > site.excerpt_length %}
+            <a href="{{ project.url | prepend: site.baseurl }}" class="post-read-more">[Read&nbsp;More]</a>
+          {% endif %}
+        </div>
+
+
+        </article>
+      </div>
+  </div>
+
+  {% if mod == 0 %}
+   </div>
+    {% assign counter = 0 %}
+  {% endif %}
+  {% endfor %}
+
 </div>
-      <!-- Projects Row -->
-      <!-- <div class="row">
-          <div class="col-md-4 portfolio-item">
-              <a href="#">
-                  <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-              </a>
-              <h3>
-                  <a href="#">Project Name</a>
-              </h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-          </div>
-          <div class="col-md-4 portfolio-item">
-              <a href="#">
-                  <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-              </a>
-              <h3>
-                  <a href="#">Project Name</a>
-              </h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-          </div>
-          <div class="col-md-4 portfolio-item">
-              <a href="#">
-                  <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-              </a>
-              <h3>
-                  <a href="#">Project Name</a>
-              </h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-          </div>
-      </div> -->
-      <!-- /.row -->
