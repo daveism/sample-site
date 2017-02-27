@@ -6,9 +6,14 @@ prose:
     - 404.html
     - LICENSE
     - feed.xml
-    - _config.yml
+    - .gitignore
+    - Dockerfile
+    - Gemfile
+    - Gemfile.lock
+    - README.md
     - /_layouts
     - /_includes
+    - /_plugins
     - /css
     - /img
     - /js
