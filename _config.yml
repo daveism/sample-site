@@ -116,7 +116,7 @@ title-separator: "-"
 timezone: "America/New_York"
 markdown: kramdown
 highlighter: rouge
-permalink: /:categories/:year/:month/:day/:title.html
+permalink: /:categories/:year/:month/:day/:title/
 
 paginate: 5
 
@@ -144,7 +144,7 @@ defaults:
 link-tags: false
 
 collections:
-  projects_pages:
+  projects:
     output: true
     permalink: /projects_pages/:path/
   drafts:
