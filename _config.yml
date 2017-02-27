@@ -24,7 +24,7 @@ description: A collection of my work!
 # List of links in the navigation bar
 navbar-links:
   About Me: "aboutme"
-  Projects: "projects.html"
+  Projects: "projects"
   # Resources:
   #    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
   #   - Learn markdown: "http://www.markdowntutorial.com/"
@@ -144,7 +144,7 @@ defaults:
 link-tags: false
 
 collections:
-  projects:
+  projects_pages:
     output: true
     permalink: /projects_pages/:path/
   drafts:
