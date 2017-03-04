@@ -1,0 +1,81 @@
+---
+layout: page
+title: Projects
+subtitle: My collection of work
+---
+<div class="posts-list">
+  {% for project in site.projects  limit:2  %}
+  <article class="post-preview">
+    <div class = "post">
+
+    <a href="{{ project.url | prepend: site.baseurl }}">
+	  <h2 class="post-title">{{ project.title }}</h2>
+	  {% if project.subtitle %}
+    <p class="post-meta">
+      {{ project.subtitle }} pages {{paginator.total_pages}}
+    </p>
+	  {% endif %}
+    </a>
+
+
+
+    <div class="post-entry-container">
+      {% if project.bigimg %}
+      <div class="col-sm-3">
+      <a href="{{ project.url  | prepend: site.baseurl }}">
+          <img class="thumbnail img-responsive" src="{{project.bigimg | prepend: site.baseurl }}" alt="{{ project.title }}">
+      </a>
+    </div>
+      <!-- <div class="post-image">
+        <a href="{{ project.url  }}">
+          <img src="{{ project.image }}">
+        </a>
+      </div> -->
+      {% endif %}
+      {% if project.image %}
+      <div class="col-sm-3">
+      <a href="{{ project.url | prepend: site.baseurl  }}">
+          <img class="thumbnail img-responsive" src="{{project.image | prepend: site.baseurl }}" alt="{{ project.title }}">
+      </a>
+    </div>
+      <!-- <div class="post-image">
+        <a href="{{ project.url  }}">
+          <img src="{{ project.image }}">
+        </a>
+      </div> -->
+      {% endif %}
+      <div class="post-entry">
+        {{ project.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
+        {% assign excerpt_word_count = project.excerpt | number_of_words %}
+        {% if project.content != project.excerpt or excerpt_word_count > site.excerpt_length %}
+          <a href="{{ project.url | prepend: site.baseurl }}" class="post-read-more">[Read&nbsp;More]</a>
+        {% endif %}
+      </div>
+    </div>
+
+    {% if project.tags.size > 0 %}
+    <div class="blog-tags">
+      <h4>
+
+      Methods Used:
+      {% if site.link-tags %}
+      {% for tag in project.tags %}
+      <a href="{{ site.baseurl | prepend: site.baseurl  }}/tag/{{ tag }}">{{ tag }}</a>
+      {% endfor %}
+      {% else %}
+        {% for tag in project.tags %}
+        <span class="label label-default">{{ tag }}</span>
+        {% endfor %}
+      {% endif %}
+    </h4>
+    </div>
+    {% endif %}
+  </div>
+
+   </article>
+  {% endfor %}
+
+
+  <div class="infinite-spinner"></div>
+
+</div>
