@@ -7,7 +7,7 @@ $(function() {
       loadNewPostsThreshold = 3000;
 
   // Load the JSON file containing all URLs
-  $.getJSON('./all-projects.json', function(data) {
+  $.getJSON('./all.json', function(data) {
     postURLs = data["projects"];
 
     // If there aren't any more posts available to load than already visible, disable fetching

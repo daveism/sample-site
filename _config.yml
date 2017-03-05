@@ -25,7 +25,7 @@ description: A collection of my work!
 navbar-links:
   About Me: "aboutme"
   Blog: "blog/index.html"
-  Portfolio: "projects_pages_orig.html"
+  Portfolio: "projects/index.html"
   # Resources:
   #    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
   #   - Learn markdown: "http://www.markdowntutorial.com/"
