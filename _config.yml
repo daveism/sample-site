@@ -24,6 +24,7 @@ description: A collection of my work!
 # List of links in the navigation bar
 navbar-links:
   About Me: "aboutme"
+  Blog: "blog/index.html"
   Portfolio: "projects_pages_orig.html"
   # Resources:
   #    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
@@ -119,6 +120,7 @@ highlighter: rouge
 permalink: /:categories/:year/:month/:day/:title.html
 
 paginate: 5
+paginate_path: "/blog/page:num"
 
 kramdown:
   input: GFM
