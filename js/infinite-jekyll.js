@@ -8,7 +8,7 @@ $(function() {
 
   // Load the JSON file containing all URLs
   $.getJSON('./all.json', function(data) {
-    postURLs = data["projects"];
+    postURLs = data["posts"];
 
     // If there aren't any more posts available to load than already visible, disable fetching
     if (postURLs.length <= postsToLoad)

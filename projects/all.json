@@ -2,7 +2,7 @@
 layout: null
 ---
 {
-  "projects" : [
+  "posts" : [
     {% for post in site.projects %}
     {"title": "{{ post.title }}",
     "subtitle": "{{ post.subtitle }}",
