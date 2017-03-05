@@ -8,7 +8,7 @@ $(function() {
 
   // Load the JSON file containing all URLs
   $.getJSON('./all-projects.json', function(data) {
-    postURLs = data["posts"];
+    postURLs = data["projects"];
 
     // If there aren't any more posts available to load than already visible, disable fetching
     if (postURLs.length <= postsToLoad)
@@ -19,20 +19,7 @@ $(function() {
   if ($(".infinite-spinner").length < 1)
     shouldFetchPosts = false;
 
-  // Are we close to the end of the page? If we are, load more posts
-  $(window).scroll(function(e){
-    if (!shouldFetchPosts || isFetchingPosts) return;
-
-    var windowHeight = $(window).height(),
-        windowScrollPosition = $(window).scrollTop(),
-        bottomScrollPosition = windowHeight + windowScrollPosition,
-        documentHeight = $(document).height();
-
-    // If we've scrolled past the loadNewPostsThreshold, fetch posts
-    if ((documentHeight - loadNewPostsThreshold) < bottomScrollPosition) {
-      fetchPosts();
-    }
-  });
+  $("#load-more-projects").on( "click", function(){fetchPosts()} )
 
   // Fetch a chunk of posts
   function fetchPosts() {
@@ -66,12 +53,10 @@ $(function() {
 
   function fetchPostWithIndex(index, callback) {
     var postURL = postURLs[index];
-    $.get(postURL, function(data) {
-      console.log(data)
-      var div = '<div class="post">' + data + '</div>'
-      $(data).appendTo(".post-list");
-      callback();
-    });
+    var project_div = '<div class="post">' + postURL.title + '</div>'
+    $(project_div ).appendTo(".post-list");
+
+    callback();
   }
 
   function disableFetching() {

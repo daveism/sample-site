@@ -5,11 +5,13 @@ subtitle: My collection of work
 ---
 
   <div class="post-list">
-   {% for post in site.projects limit: 3 %}
+   {% for post in site.projects limit: 2 %}
     <div class="post">
       {{ post.title }}
     </div>
     {% endfor %}
   </div>
-
-<div class="infinite-spinner"></div>
+  <div>
+    &nbsp;
+  </div>
+   <button id="load-more-projects" type="button" class="btn btn-default btn-lg" >load more</button>
