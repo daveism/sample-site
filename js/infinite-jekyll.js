@@ -62,6 +62,7 @@ $(function() {
   function disableFetching() {
     shouldFetchPosts = false;
     isFetchingPosts = false;
+    $("#load-more-projects").addClass("disabled")
     $(".infinite-spinner").fadeOut();
   }
 
